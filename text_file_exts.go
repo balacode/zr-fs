@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
-// balarabe@protonmail.com                                          License: MIT
-// :v: 2018-02-24 01:44:00 7E1228                      [zr_fs/text_file_exts.go]
+// (c) balarabe@protonmail.com                                      License: MIT
+// :v: 2018-02-25 00:42:59 7E1228                      [zr_fs/text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs

@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
-// balarabe@protonmail.com                                          License: MIT
-// :v: 2018-02-24 01:44:00 4A0F67                    [zr_fs/dir_watcher_test.go]
+// (c) balarabe@protonmail.com                                      License: MIT
+// :v: 2018-02-25 00:42:59 4A0F67                    [zr_fs/dir_watcher_test.go]
 // -----------------------------------------------------------------------------
 
 package fs

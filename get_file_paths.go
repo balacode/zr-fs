@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
-// balarabe@protonmail.com                                          License: MIT
-// :v: 2018-02-24 01:44:00 F032FE                      [zr_fs/get_file_paths.go]
+// (c) balarabe@protonmail.com                                      License: MIT
+// :v: 2018-02-25 00:42:59 F032FE                      [zr_fs/get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
