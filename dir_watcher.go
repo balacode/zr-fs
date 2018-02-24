@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // balarabe@protonmail.com                                          License: MIT
-// :v: 2018-02-07 11:30:06 8B333A                         [zr/fs/dir_watcher.go]
+// :v: 2018-02-24 01:44:00 E88DC0                         [zr_fs/dir_watcher.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -8,8 +8,8 @@ package fs
 import "os"   // standard
 import "time" // standard
 
-import "ase/zr"     // Zirconium
-import "ase/zr/win" // Zirconium
+import "github.com/balacode/zr"     // Zirconium
+import "github.com/balacode/zr_win" // Zirconium
 
 // A DirWatcher holds a channel that delivers a folder's
 // path when any file in the folder changes.

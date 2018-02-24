@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // balarabe@protonmail.com                                          License: MIT
-// :v: 2018-02-23 16:30:48 0FE5FC               [zr/fs/read_file_chunks_test.go]
+// :v: 2018-02-24 01:44:00 5F23D9               [zr_fs/read_file_chunks_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -18,7 +18,7 @@ import "os"          // standard
 import "testing"     // standard
 import str "strings" // standard
 
-import "ase/zr" // Zirconium
+import "github.com/balacode/zr" // Zirconium
 
 // go test --run Test_rdfc_ReadFileChunks_
 func Test_rdfc_ReadFileChunks_(t *testing.T) {

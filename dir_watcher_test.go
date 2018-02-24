@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // balarabe@protonmail.com                                          License: MIT
-// :v: 2018-02-23 16:07:48 905EFF                    [zr/fs/dir_watcher_test.go]
+// :v: 2018-02-24 01:44:00 4A0F67                    [zr_fs/dir_watcher_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -18,7 +18,7 @@ import "os"      // standard
 import "time"    // standard
 import "testing" // standard
 
-import "ase/zr" // Zirconium
+import "github.com/balacode/zr" // Zirconium
 
 // go test --run Test_dirw_DirWatcher_
 func Test_dirw_DirWatcher_(t *testing.T) {
