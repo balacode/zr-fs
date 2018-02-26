@@ -1,12 +1,12 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-02-25 00:42:59 4A0F67                    [zr_fs/dir_watcher_test.go]
+// :v: 2018-02-26 01:57:01 9FB0F5            [zr_fs/dir_watcher_windows_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
 /*
-to test all items in dir_watcher.go use:
+to test all items in dir_watcher_windows.go use:
     go test --run Test_dirw_
 
 to generate a test coverage report for the whole module use:
