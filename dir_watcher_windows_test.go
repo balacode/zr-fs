@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-02-26 01:57:01 9FB0F5            [zr_fs/dir_watcher_windows_test.go]
+// :v: 2018-02-26 23:07:32 9AF3F5            [zr_fs/dir_watcher_windows_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -18,7 +18,7 @@ import "os"      // standard
 import "time"    // standard
 import "testing" // standard
 
-import "github.com/balacode/zr" // Zirconium
+import "github.com/balacode/zr" // Zircon-Go
 
 // go test --run Test_dirw_DirWatcher_
 func Test_dirw_DirWatcher_(t *testing.T) {

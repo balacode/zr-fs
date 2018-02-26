@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-02-25 00:42:59 2E94D2                                [zr_fs/func.go]
+// :v: 2018-02-26 23:07:32 7DB73E                                [zr_fs/func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -10,7 +10,7 @@ import "io/ioutil"   // standard
 import "os"          // standard
 import str "strings" // standard
 
-import "github.com/balacode/zr" // Zirconium
+import "github.com/balacode/zr" // Zircon-Go
 
 // # File Functions
 //   FileExists(path string) bool

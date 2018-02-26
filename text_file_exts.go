@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-02-25 00:42:59 7E1228                      [zr_fs/text_file_exts.go]
+// :v: 2018-02-26 23:07:32 5B8AD7                      [zr_fs/text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -16,7 +16,7 @@ package fs
 // *.properties *.py *.rb *.rc *.rc2 *.reg *.resx *.rs *.rules
 // *.settings *.sh *.shtml *.sln *.sql *.svg *.ters *.tlh *.tli
 // *.txt *.user *.vbp *.vbw *.vcp *.vcproj *.vcw *.vcxproj
-// *.workspace *.xaml *.xhtml *.xml *.xs *.xsd *.xsx
+// *.workspace *.xaml *.xhtml *.xml *.xs *.xsd *.xsx *.yml
 var TextFileExts = []string{ //TODO: use upper case
 	//
 	// Web Files
@@ -103,6 +103,7 @@ var TextFileExts = []string{ //TODO: use upper case
 	"ters",
 	"xaml",
 	"xml",
+	"yml",
 	//
 	// Miscellaneous
 	"asm",

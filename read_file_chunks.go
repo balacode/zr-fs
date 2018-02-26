@@ -1,13 +1,13 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-02-25 00:42:59 D92BCC                    [zr_fs/read_file_chunks.go]
+// :v: 2018-02-26 23:07:32 84EC41                    [zr_fs/read_file_chunks.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
 import "os" // standard
 
-import "github.com/balacode/zr" // Zirconium
+import "github.com/balacode/zr" // Zircon-Go
 
 // ReadFileChunks reads a file in chunks and repeatedly calls the
 // supplied 'reader' function with each read chunk.
