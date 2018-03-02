@@ -1,7 +1,5 @@
-# zr_fs
-Zirconium Go Library - File System package
-
-This Go package is part of the Zirconium library.
+# zr_fs - Zircon-Go Library File System Package 
+[![Go Report Card](https://goreportcard.com/badge/github.com/balacode/zr_fs)](https://goreportcard.com/report/github.com/balacode/zr_fs)  
 
 The main 'zr' package, contains OS-independent and general functionality, while most file system related functions are contained in this package.
 
