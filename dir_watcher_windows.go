@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-01 17:07:24 A4396B                 [zr_fs/dir_watcher_windows.go]
+// :v: 2018-03-23 11:40:22 5DD8E6                 [zr-fs/dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 // +build windows
 
@@ -9,7 +9,7 @@ package fs
 import "time" // standard
 
 import "github.com/balacode/zr"     // Zircon-Go
-import "github.com/balacode/zr_win" // Zircon-Go
+import "github.com/balacode/zr-win" // Zircon-Go
 
 // waitForDirChange __
 func waitForDirChange(c chan string, dir string) {

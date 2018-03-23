@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-02-26 23:07:32 46A5AA                              [zr_fs/module.go]
+// :v: 2018-03-23 11:40:22 C6E28B                              [zr-fs/module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions
