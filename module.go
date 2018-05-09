@@ -1,14 +1,16 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 C6E28B                              [zr-fs/module.go]
+// :v: 2018-05-09 01:03:18 D40947                              [zr-fs/module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions
 package fs
 
-import "fmt" // standard
+import (
+	"fmt"
 
-import "github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr" // Zircon-Go
+)
 
 // LB specifies a line break string.
 // On Windows it is a pair of CR and LF.

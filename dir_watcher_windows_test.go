@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 8FC104            [zr-fs/dir_watcher_windows_test.go]
+// :v: 2018-05-09 01:03:18 F4BB96            [zr-fs/dir_watcher_windows_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -14,11 +14,13 @@ to generate a test coverage report for the whole module use:
     go tool cover -html=cover.out
 */
 
-import "os"      // standard
-import "time"    // standard
-import "testing" // standard
+import (
+	"os"
+	"testing"
+	"time"
 
-import "github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr" // Zircon-Go
+)
 
 // go test --run Test_dirw_DirWatcher_
 func Test_dirw_DirWatcher_(t *testing.T) {

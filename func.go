@@ -1,16 +1,18 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 F2B997                                [zr-fs/func.go]
+// :v: 2018-05-09 01:03:18 45247C                                [zr-fs/func.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
-import "bytes"       // standard
-import "io/ioutil"   // standard
-import "os"          // standard
-import str "strings" // standard
+import (
+	"bytes"
+	"io/ioutil"
+	"os"
+	str "strings"
 
-import "github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr" // Zircon-Go
+)
 
 // # File Functions
 //   FileExists(path string) bool

@@ -1,16 +1,18 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 A40992                           [zr-fs/walk_path.go]
+// :v: 2018-05-09 01:03:18 AE4BAA                           [zr-fs/walk_path.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
-import "fmt"           // standard
-import "os"            // standard
-import "path/filepath" // standard
-import "sync"          // standard
-import "time"          // standard
-import str "strings"   // standard
+import (
+	"fmt"
+	"os"
+	"path/filepath"
+	str "strings"
+	"sync"
+	"time"
+)
 
 // WalkPathOptions __
 type WalkPathOptions struct {

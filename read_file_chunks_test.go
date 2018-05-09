@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 3AE131               [zr-fs/read_file_chunks_test.go]
+// :v: 2018-05-09 01:03:18 EFF386               [zr-fs/read_file_chunks_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -14,11 +14,13 @@ to generate a test coverage report for the whole module use:
     go tool cover -html=cover.out
 */
 
-import "os"          // standard
-import "testing"     // standard
-import str "strings" // standard
+import (
+	"os"
+	str "strings"
+	"testing"
 
-import "github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr" // Zircon-Go
+)
 
 // go test --run Test_rdfc_ReadFileChunks_
 func Test_rdfc_ReadFileChunks_(t *testing.T) {

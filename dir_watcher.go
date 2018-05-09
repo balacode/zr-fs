@@ -1,13 +1,15 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-18 23:19:27 0CE224                 [zr/fs/dir_watcher_windows.go]
+// :v: 2018-05-09 01:03:18 A2DA1A                 [zr/fs/dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
-import "os" // standard
+import (
+	"os"
 
-import "github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr" // Zircon-Go
+)
 
 // A DirWatcher holds a channel that delivers a folder's
 // path when any file in the folder changes.

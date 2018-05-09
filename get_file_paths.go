@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 9227DC                      [zr-fs/get_file_paths.go]
+// :v: 2018-05-09 01:03:18 8F657A                      [zr-fs/get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -14,10 +14,12 @@ package fs
 //   GetFilePaths(dir string, exts []string) []string
 //   getFilesMap(dir, filter string) Files
 
-import "fmt"           // standard
-import "os"            // standard
-import "path/filepath" // standard
-import str "strings"   // standard
+import (
+	"fmt"
+	"os"
+	"path/filepath"
+	str "strings"
+)
 
 // -----------------------------------------------------------------------------
 // # Function
