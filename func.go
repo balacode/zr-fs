@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-05-09 01:03:18 45247C                                [zr-fs/func.go]
+// :v: 2018-05-15 12:15:11 5EC488                                [zr-fs/func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -15,6 +15,7 @@ import (
 )
 
 // # File Functions
+//   DirExists(path string) bool
 //   FileExists(path string) bool
 //   IsFileExt(filename string, fileExts []string) bool
 //   IsTextFile(filename string) bool
@@ -23,6 +24,18 @@ import (
 
 // -----------------------------------------------------------------------------
 // # File Functions
+
+// DirExists returns true if the file given by 'path' exists.
+func DirExists(path string) bool {
+	var _, err = os.Stat(path)
+	if err == nil {
+		return true
+	}
+	if os.IsNotExist(err) {
+		return false
+	}
+	return false
+} //                                                                   DirExists
 
 // FileExists returns true if the file given by 'path' exists.
 func FileExists(path string) bool {
