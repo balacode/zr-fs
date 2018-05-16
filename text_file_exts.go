@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-03-23 11:40:22 4ADDE9                      [zr-fs/text_file_exts.go]
+// :v: 2018-05-16 17:18:12 DD8676                      [zr-fs/text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -13,8 +13,8 @@ package fs
 // *.hta *.htm *.html *.hxx *.java *.jcl *.js *.json *.jsonp
 // *.layout *.less *.log *.mak *.manifest *.meta *.odl *.pas
 // *.pdm *.ph *.php *.pl *.plg *.pm *.prefs *.project
-// *.properties *.py *.rb *.rc *.rc2 *.reg *.resx *.rs *.rules
-// *.settings *.sh *.shtml *.sln *.sql *.svg *.ters *.tlh *.tli
+// *.properties *.py *.rb *.rc *.rc2 *.reg *.resx *.rgon *.rs
+// *.rules *.settings *.sh *.shtml *.sln *.sql *.svg *.tlh *.tli
 // *.txt *.user *.vbp *.vbw *.vcp *.vcproj *.vcw *.vcxproj
 // *.workspace *.xaml *.xhtml *.xml *.xs *.xsd *.xsx *.yml
 var TextFileExts = []string{ //TODO: use upper case
@@ -99,8 +99,8 @@ var TextFileExts = []string{ //TODO: use upper case
 	// Markup
 	"json",
 	"jsonp",
+	"rgon",
 	"svg",
-	"ters",
 	"xaml",
 	"xml",
 	"yml",
