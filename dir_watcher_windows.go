@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-05-09 01:03:18 C21E5C                 [zr-fs/dir_watcher_windows.go]
+// :v: 2018-05-24 03:05:23 FCDBA7                 [zr-fs/dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 // +build windows
 
@@ -9,8 +9,8 @@ package fs
 import (
 	"time"
 
-	"github.com/balacode/zr"     // Zircon-Go
-	"github.com/balacode/zr-win" // Zircon-Go
+	"github.com/balacode/zr"
+	"github.com/balacode/zr-win"
 )
 
 // waitForDirChange __

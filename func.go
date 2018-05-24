@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-05-15 12:15:11 5EC488                                [zr-fs/func.go]
+// :v: 2018-05-24 03:05:23 DB33E0                                [zr-fs/func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -11,7 +11,7 @@ import (
 	"os"
 	str "strings"
 
-	"github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr"
 )
 
 // # File Functions

@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-05-17 10:44:18 B5D0EA                 [zr-fs/dir_watcher_windows.go]
+// :v: 2018-05-24 03:05:23 553A4A                 [zr-fs/dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -8,7 +8,7 @@ package fs
 import (
 	"os"
 
-	"github.com/balacode/zr" // Zircon-Go
+	"github.com/balacode/zr"
 )
 
 // A DirWatcher holds a channel that delivers a folder's
