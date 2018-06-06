@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 2503DD                      zr-fs/[text_file_exts.go]
+// :v: 2018-06-06 07:32:42 CA3EE6                      zr-fs/[text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -11,7 +11,7 @@ package fs
 // *.ctp *.cxx *.def *.dep *.dpr *.dsp *.dsw *.fd *.frm
 // *.gitignore *.go *.h *.hc *.hh *.hhc *.hhk *.hhp *.hpp *.hs
 // *.hta *.htm *.html *.hxx *.java *.jcl *.js *.json *.jsonp
-// *.layout *.less *.log *.mak *.manifest *.meta *.odl *.pas
+// *.kt *.layout *.less *.log *.mak *.manifest *.meta *.odl *.pas
 // *.pdm *.ph *.php *.pl *.plg *.pm *.prefs *.project
 // *.properties *.py *.rb *.rc *.rc2 *.reg *.resx *.rgon *.rs
 // *.rules *.settings *.sh *.shtml *.sln *.sql *.svg *.tlh *.tli
@@ -33,9 +33,10 @@ var TextFileExts = []string{ //TODO: use upper case
 	"shtml",
 	"xhtml",
 	//
-	// Android/Java Files
+	// Android/Java/Kotlin Files
 	"classpath",
 	"java",
+	"kt",
 	"prefs",
 	"project",
 	"properties",
