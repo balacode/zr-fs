@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 5167EF                 zr-fs/[dir_watcher_windows.go]
+// :v: 2018-07-04 13:08:30 AD1FC7                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -14,8 +14,8 @@ import (
 // A DirWatcher holds a channel that delivers a folder's
 // path when any file in the folder changes.
 type DirWatcher struct {
-	dir string
-	C   <-chan string // The channel on which path changes are sent.
+	Chan <-chan string // the channel on which path changes are sent
+	dir  string
 } //                                                                  DirWatcher
 
 // NewDirWatcher returns a new DirWatcher that contains
@@ -29,8 +29,8 @@ func NewDirWatcher(dir string) *DirWatcher {
 	}
 	var c = make(chan string, 1)
 	var ret = &DirWatcher{
-		C:   c,
-		dir: dir,
+		Chan: c,
+		dir:  dir,
 	}
 	go waitForDirChange(c, dir)
 	return ret

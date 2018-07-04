@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 49CE28            zr-fs/[dir_watcher_windows_test.go]
+// :v: 2018-07-04 12:44:13 568D8E            zr-fs/[dir_watcher_windows_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -30,9 +30,9 @@ func Test_dirw_DirWatcher_(t *testing.T) {
 	//
 	// this test writes to TESTFILE 5 times every 150ms
 	// then checks that the watcher detects a directory change exactly 5 times
-	var dirWatchChan = NewDirWatcher(TESTDIR).C
-	var intervalChan = time.NewTicker(time.Millisecond * 150).C
-	var quitChan = time.NewTimer(time.Second * 1).C
+	var dirWatchChan = NewDirWatcher(TESTDIR).Chan
+	var intervalChan = time.NewTicker(time.Millisecond * 150).Chan
+	var quitChan = time.NewTimer(time.Second * 1).Chan
 	var intervalCount = 5
 	var watchCount = 0
 	//
