@@ -1,14 +1,17 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 B28C26                                zr-fs/[func.go]
+// :v: 2019-01-08 10:16:15 5D2E04                                zr-fs/[func.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
 import (
+	"archive/zip"
 	"bytes"
+	"io"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	str "strings"
 
 	"github.com/balacode/zr"
@@ -25,7 +28,7 @@ import (
 // -----------------------------------------------------------------------------
 // # File Functions
 
-// DirExists returns true if the file given by 'path' exists.
+// DirExists returns true if the directory/folder given by 'path' exists.
 func DirExists(path string) bool {
 	var _, err = os.Stat(path)
 	if err == nil {
@@ -48,6 +51,56 @@ func FileExists(path string) bool {
 	}
 	return false
 } //                                                                  FileExists
+
+// FlatZip compresses the files specified in 'fileNames' into the ZIP archive
+// named 'zipName'. Does not create subfolders, hence a 'flat' archive.
+func FlatZip(zipName string, fileNames []string) error {
+	var archive *zip.Writer
+	{
+		var file, err = os.Create(zipName)
+		if err != nil {
+			return err
+		}
+		archive = zip.NewWriter(file)
+		defer file.Close()
+		defer archive.Close()
+	}
+	for _, fileName := range fileNames {
+		var err error
+		var file *os.File
+		{
+			file, err = os.Open(fileName)
+			if err != nil {
+				return err
+			}
+			defer file.Close()
+		}
+		var header *zip.FileHeader
+		{
+			var info os.FileInfo
+			info, err = file.Stat()
+			if err != nil {
+				return err
+			}
+			header, err = zip.FileInfoHeader(info)
+			if err != nil {
+				return err
+			}
+			header.Name = filepath.Base(fileName)
+			header.Method = zip.Deflate
+		}
+		var wr io.Writer
+		wr, err = archive.CreateHeader(header)
+		if err != nil {
+			return err
+		}
+		_, err = io.Copy(wr, file)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+} //                                                                     FlatZip
 
 // IsFileExt returns true if the specified 'filename' has a
 // file extension listed in 'fileExts'. The file extensions
