@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 31E0D5                      zr-fs/[get_file_paths.go]
+// :v: 2018-11-29 10:44:37 5ED1D2                      zr-fs/[get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -26,7 +26,7 @@ import (
 
 // GetFilePaths returns a list of file names (with full path) contained
 // in folder 'dir' that match the given file extensions.
-// Extensions should be specified as: "ext", or ".ext", not "*.ext"
+// File extensions can be specified as "*.ext", ".ext", or "ext"
 // If you don't specify 'exts', returns all files in 'dir'
 func GetFilePaths(dir string, exts ...string) []string {
 	if dir == "" {
@@ -50,10 +50,7 @@ func GetFilePaths(dir string, exts ...string) []string {
 			// skip files that don't match needed extension(s)
 			var match = len(exts) == 0
 			for _, ext := range exts {
-				ext = str.ToLower(ext)
-				if !str.HasPrefix(ext, ".") {
-					ext = "." + ext
-				}
+				ext = "." + str.ToLower(str.Trim(ext, "*."))
 				if str.HasSuffix(str.ToLower(path), ext) {
 					match = true
 					break
