@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 ED96D7                 zr-fs/[dir_watcher_windows.go]
+// :v: 2019-03-05 11:46:41 935B8A                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 // +build windows
 
@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/balacode/zr"
-	"github.com/balacode/zr-win"
+	win "github.com/balacode/zr-win"
 )
 
 // waitForDirChange __
