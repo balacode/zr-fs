@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 B01EA4                              zr-fs/[module.go]
+// :v: 2019-03-04 20:18:51 491D56                              zr-fs/[module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions
@@ -21,24 +21,11 @@ const LB = "\r\n"
 // LF specifies a line feed string ("\n").
 const LF = "\n"
 
-// CallTracing specifies if zr.TraceCall() should be called after
-// every call to a function in this module. Used for debugging.
-const CallTracing = false
-
 // PL is fmt.Println() but is used only for debugging.
 var PL = fmt.Println
 
 // VL is zr.VerboseLog() but is used only for debugging.
 var VL = zr.VerboseLog
-
-// // traceCall is a function that enables call tracing.
-// // It not called when set to nil.
-// var traceCall = func() func() {
-//     if CallTracing {
-//         return zr.TraceCall
-//     }
-//     return nil
-// }()
 
 // Callers returns a human-friendly string showing the call stack with each
 // callers calling method or function's name and line number. The most
