@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-03-05 11:46:41 935B8A                 zr-fs/[dir_watcher_windows.go]
+// :v: 2019-04-04 17:29:22 0FAA7B                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 // +build windows
 
@@ -18,7 +18,7 @@ func waitForDirChange(c chan string, dir string) {
 	// start watching the folder (and check that handle value is correct)
 	var handles [2]win.HANDLE
 	{
-		var NOTIFY = win.FILE_NOTIFY_CHANGE_CREATION |
+		NOTIFY := win.FILE_NOTIFY_CHANGE_CREATION |
 			win.FILE_NOTIFY_CHANGE_FILE_NAME |
 			win.FILE_NOTIFY_CHANGE_LAST_WRITE |
 			win.FILE_NOTIFY_CHANGE_SIZE |
@@ -40,19 +40,19 @@ func waitForDirChange(c chan string, dir string) {
 			return
 		}
 	}
-	var prev = time.Now()
+	prev := time.Now()
 	//
 	// begin loop that waits for a change to occur
 	for {
 		// wait for notification
-		var status = win.WaitForMultipleObjects(
+		status := win.WaitForMultipleObjects(
 			1, &handles[0], win.TRUE, win.INFINITE,
 		)
 		if status != win.WAIT_OBJECT_0 {
 			zr.Error("Unhandled wait status", status)
 			return
 		}
-		var now = time.Now()
+		now := time.Now()
 		// only send on channel if more than 0.1s elapsed from last change,
 		// if enough time elapsed, wait for 0.1s, then send on channel
 		if since := now.Sub(prev).Seconds(); since > 0.1 {

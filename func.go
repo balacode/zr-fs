@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-01-08 10:16:15 5D2E04                                zr-fs/[func.go]
+// :v: 2019-04-04 17:29:22 4B50C0                                zr-fs/[func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -30,7 +30,7 @@ import (
 
 // DirExists returns true if the directory/folder given by 'path' exists.
 func DirExists(path string) bool {
-	var _, err = os.Stat(path)
+	_, err := os.Stat(path)
 	if err == nil {
 		return true
 	}
@@ -42,7 +42,7 @@ func DirExists(path string) bool {
 
 // FileExists returns true if the file given by 'path' exists.
 func FileExists(path string) bool {
-	var _, err = os.Stat(path)
+	_, err := os.Stat(path)
 	if err == nil {
 		return true
 	}
@@ -57,7 +57,7 @@ func FileExists(path string) bool {
 func FlatZip(zipName string, fileNames []string) error {
 	var archive *zip.Writer
 	{
-		var file, err = os.Create(zipName)
+		file, err := os.Create(zipName)
 		if err != nil {
 			return err
 		}
@@ -128,12 +128,12 @@ func IsTextFile(filename string) bool {
 // ReadFileLines reads the specified filename and returns
 // all the lines it contains in a string array.
 func ReadFileLines(filename string) []string {
-	var data, err = ioutil.ReadFile(filename)
+	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		myError("Failed reading", filename, "due to:", err)
 		return []string{} // erv
 	}
-	var ret = str.Split(string(data), "\n")
+	ret := str.Split(string(data), "\n")
 	return ret
 } //                                                               ReadFileLines
 
@@ -144,7 +144,7 @@ func WriteFileLines(filename string, lines []string) error {
 	if filename == "" {
 		return myError(zr.EInvalidArg, "^filename")
 	}
-	var data = []byte(str.Join(lines, "\n"))
+	data := []byte(str.Join(lines, "\n"))
 	//
 	// terminate the last line with a newline
 	if data[len(data)-1] != '\n' {
@@ -156,7 +156,7 @@ func WriteFileLines(filename string, lines []string) error {
 		data = append(data, '\n')
 	}
 	// save the file
-	var err = ioutil.WriteFile(filename, data, 0644)
+	err := ioutil.WriteFile(filename, data, 0644)
 	if err != nil {
 		return myError("Failed writing", filename, "due to:", err)
 	}

@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-07-04 13:08:30 AD1FC7                 zr-fs/[dir_watcher_windows.go]
+// :v: 2019-04-04 17:29:22 518331                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -22,13 +22,13 @@ type DirWatcher struct {
 // a channel that be sent the name of a file every time
 // a file in the folder or one of its subfolders changes.
 func NewDirWatcher(dir string) *DirWatcher {
-	var _, err = os.Stat(dir)
+	_, err := os.Stat(dir)
 	if err != nil && os.IsNotExist(err) {
 		zr.Error("Folder^", dir, "does not exist")
 		return nil
 	}
-	var c = make(chan string, 1)
-	var ret = &DirWatcher{
+	c := make(chan string, 1)
+	ret := &DirWatcher{
 		Chan: c,
 		dir:  dir,
 	}

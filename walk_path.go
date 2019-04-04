@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 34C88B                           zr-fs/[walk_path.go]
+// :v: 2019-04-04 17:29:22 0BA8F9                           zr-fs/[walk_path.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -26,13 +26,17 @@ type WalkPathOptions struct {
 
 // WalkPath __
 func WalkPath(path string, opts WalkPathOptions) []string {
-	var ret = []string{}
-	var scanCount = 0
-	var listCount = 0
-	var size = int64(0)
-	var mutex = &sync.Mutex{}
-	var update = true
-	var runProgressFunc = func() {
+
+	var (
+		ret       = []string{}
+		scanCount = 0
+		listCount = 0
+		size      = int64(0)
+		mutex     = &sync.Mutex{}
+		update    = true
+	)
+
+	runProgressFunc := func() {
 		if opts.ProgressFunc == nil {
 			return
 		}
@@ -40,7 +44,8 @@ func WalkPath(path string, opts WalkPathOptions) []string {
 		opts.ProgressFunc(scanCount, listCount, size)
 		mutex.Unlock()
 	}
-	var appendFile = func(path string, info os.FileInfo, err error) error {
+
+	appendFile := func(path string, info os.FileInfo, err error) error {
 		scanCount++
 		// ignore directories and files in system folders
 		if err != nil {
@@ -84,7 +89,7 @@ func WalkPath(path string, opts WalkPathOptions) []string {
 			}
 		}()
 	}
-	var err = filepath.Walk(path, appendFile)
+	err := filepath.Walk(path, appendFile)
 	if err != nil {
 		myError(err)
 		ret = []string{}

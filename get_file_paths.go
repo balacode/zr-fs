@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-11-29 10:44:37 5ED1D2                      zr-fs/[get_file_paths.go]
+// :v: 2019-04-04 17:29:22 6F6CDE                      zr-fs/[get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -48,7 +48,7 @@ func GetFilePaths(dir string, exts ...string) []string {
 				return nil
 			}
 			// skip files that don't match needed extension(s)
-			var match = len(exts) == 0
+			match := len(exts) == 0
 			for _, ext := range exts {
 				ext = "." + str.ToLower(str.Trim(ext, "*."))
 				if str.HasSuffix(str.ToLower(path), ext) {

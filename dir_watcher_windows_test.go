@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-07-04 12:44:13 568D8E            zr-fs/[dir_watcher_windows_test.go]
+// :v: 2019-04-04 17:29:22 C3098D            zr-fs/[dir_watcher_windows_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -30,19 +30,20 @@ func Test_dirw_DirWatcher_(t *testing.T) {
 	//
 	// this test writes to TESTFILE 5 times every 150ms
 	// then checks that the watcher detects a directory change exactly 5 times
-	var dirWatchChan = NewDirWatcher(TESTDIR).Chan
-	var intervalChan = time.NewTicker(time.Millisecond * 150).Chan
-	var quitChan = time.NewTimer(time.Second * 1).Chan
-	var intervalCount = 5
-	var watchCount = 0
-	//
+	var (
+		dirWatchChan  = NewDirWatcher(TESTDIR).Chan
+		intervalChan  = time.NewTicker(time.Millisecond * 150).Chan
+		quitChan      = time.NewTimer(time.Second * 1).Chan
+		intervalCount = 5
+		watchCount    = 0
+	)
 	// all 3 channels should not be nil
 	zr.TTrue(t, dirWatchChan != nil)
 	zr.TTrue(t, intervalChan != nil)
 	zr.TTrue(t, quitChan != nil)
 	os.Remove(TESTFILE)
 	//
-	var run = true
+	run := true
 loop:
 	for run {
 		select {

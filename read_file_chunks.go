@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 D472DF                    zr-fs/[read_file_chunks.go]
+// :v: 2019-04-04 17:29:22 F9C024                    zr-fs/[read_file_chunks.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -53,8 +53,8 @@ func ReadFileChunks(
 	defer file.Close()
 	//
 	// repeatedly read chunks from the file and call reader()
-	var chunk = make([]byte, chunkSize)
-	var pos = int64(0)
+	chunk := make([]byte, chunkSize)
+	pos := int64(0)
 	for {
 		// advance the reading position
 		_, err = file.Seek(pos, 0)
@@ -71,7 +71,7 @@ func ReadFileChunks(
 			return zr.Error("Failed reading", filename, "due to:", err)
 		}
 		// call the reader function with the chunk of dat
-		var offset = reader(chunk[:bytesRead])
+		offset := reader(chunk[:bytesRead])
 		if offset == 0 {
 			break
 		}

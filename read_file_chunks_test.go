@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 EA22F0               zr-fs/[read_file_chunks_test.go]
+// :v: 2019-04-04 17:29:22 209E62               zr-fs/[read_file_chunks_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -32,11 +32,11 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// -------------------------------------------------------------------------
 	// return an error if 'filename' is blank
 	{
-		var reader = func(chunk []byte) int64 {
+		reader := func(chunk []byte) int64 {
 			t.Error("Called reader() when 'filename' is blank.")
 			return 0
 		}
-		var err = ReadFileChunks("", ChunkSize, reader)
+		err := ReadFileChunks("", ChunkSize, reader)
 		if err == nil {
 			t.Error("Did not return an error when 'filename' is blank.")
 		}
@@ -44,11 +44,11 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// -------------------------------------------------------------------------
 	// return an error if 'filename' is not blank, but doesn't exist
 	{
-		var reader = func(chunk []byte) int64 {
+		reader := func(chunk []byte) int64 {
 			t.Error("Called reder() when 'filename' doesn't exist.")
 			return 0
 		}
-		var err = ReadFileChunks("NOFILE.TMP", ChunkSize, reader)
+		err := ReadFileChunks("NOFILE.TMP", ChunkSize, reader)
 		if err == nil {
 			t.Error("Did not return an error when 'filename' doesn't exist.")
 		}
@@ -56,11 +56,11 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// -------------------------------------------------------------------------
 	// return an error if 'chunkSize' is zero
 	{
-		var reader = func(chunk []byte) int64 {
+		reader := func(chunk []byte) int64 {
 			t.Error("Called reader() when 'chunkSize' is zero.")
 			return 0
 		}
-		var err = ReadFileChunks(SampleFile, 0, reader)
+		err := ReadFileChunks(SampleFile, 0, reader)
 		if err == nil {
 			t.Error("Did not return an error when 'chunkSize' is zero.")
 		}
@@ -68,11 +68,11 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// -------------------------------------------------------------------------
 	// return an error if 'chunkSize' is negative
 	{
-		var reader = func(chunk []byte) int64 {
+		reader := func(chunk []byte) int64 {
 			t.Error("Called reader() when 'chunkSize' is negative.")
 			return 0
 		}
-		var err = ReadFileChunks(SampleFile, -1, reader)
+		err := ReadFileChunks(SampleFile, -1, reader)
 		if err == nil {
 			t.Error("Did not return an error when 'chunkSize' is negative.")
 		}
@@ -80,13 +80,13 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// -------------------------------------------------------------------------
 	// return an error if 'reader' is nil
 	{
-		var err = ReadFileChunks(SampleFile, ChunkSize, nil)
+		err := ReadFileChunks(SampleFile, ChunkSize, nil)
 		if err == nil {
 			t.Error("Did not return an error when 'reader' is nil.")
 		}
 	}
-	var fillers = []string{"1", "2", "3", "4", "5", "6", "7"}
-	var createSampleFile = func() {
+	fillers := []string{"1", "2", "3", "4", "5", "6", "7"}
+	createSampleFile := func() {
 		// create a file and fill it with some data
 		os.Remove(SampleFile)
 		for _, filler := range fillers {
@@ -99,9 +99,9 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// is the read data consistent?
 	{
 		// reader() function that will check for consistency
-		var i = 0
-		var reader = func(chunk []byte) int64 {
-			var expect = str.Repeat(fillers[i], ChunkSize)
+		i := 0
+		reader := func(chunk []byte) int64 {
+			expect := str.Repeat(fillers[i], ChunkSize)
 			if string(chunk) != expect {
 				t.Error("Read chunk doesn't match expected data.")
 			}
@@ -109,7 +109,7 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 			return int64(len(chunk))
 		}
 		createSampleFile()
-		var err = ReadFileChunks(SampleFile, ChunkSize, reader)
+		err := ReadFileChunks(SampleFile, ChunkSize, reader)
 		if err != nil {
 			t.Error("Expected to return nil, but returned error:", err)
 		}
@@ -118,12 +118,12 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	// when 'reader' returns 0, further reading must stop
 	{
 		// reader() function must be called only once
-		var i = 0
-		var reader = func(chunk []byte) int64 {
+		i := 0
+		reader := func(chunk []byte) int64 {
 			if i > 0 {
 				t.Error("reader() returned false, but reading did not stop.")
 			}
-			var expect = str.Repeat(fillers[0], ChunkSize)
+			expect := str.Repeat(fillers[0], ChunkSize)
 			if string(chunk) != expect {
 				t.Error("Read chunk doesn't match expected data.")
 			}
@@ -131,7 +131,7 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 			return 0
 		}
 		createSampleFile()
-		var err = ReadFileChunks(SampleFile, ChunkSize, reader)
+		err := ReadFileChunks(SampleFile, ChunkSize, reader)
 		if err != nil {
 			t.Error("Expected to return nil, but returned error:", err)
 		}
