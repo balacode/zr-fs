@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:29:22 0BA8F9                           zr-fs/[walk_path.go]
+// :v: 2019-05-01 23:31:05 DD0E57                           zr-fs/[walk_path.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	str "strings"
+	"strings"
 	"sync"
 	"time"
 )
@@ -49,15 +49,15 @@ func WalkPath(path string, opts WalkPathOptions) []string {
 		scanCount++
 		// ignore directories and files in system folders
 		if err != nil {
-			if !str.Contains(str.ToLower(fmt.Sprintf("%s", err)),
+			if !strings.Contains(strings.ToLower(fmt.Sprintf("%s", err)),
 				"$recycle.bin") {
 				myError(err)
 			}
 			return nil
 		}
 		if info.IsDir() ||
-			str.Contains(path, "\\System Volume Information\\") ||
-			str.Contains(path, "$RECYCLE.BIN") {
+			strings.Contains(path, "\\System Volume Information\\") ||
+			strings.Contains(path, "$RECYCLE.BIN") {
 			return nil
 		}
 		if len(opts.FileExts) > 0 && !IsFileExt(path, opts.FileExts) {

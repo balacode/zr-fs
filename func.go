@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:29:22 4B50C0                                zr-fs/[func.go]
+// :v: 2019-05-01 23:31:05 E78E47                                zr-fs/[func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -12,7 +12,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	str "strings"
+	"strings"
 
 	"github.com/balacode/zr"
 )
@@ -109,9 +109,9 @@ func FlatZip(zipName string, fileNames []string) error {
 // extensions, but []string{".go", "*.txt", ".log"} is not.
 func IsFileExt(filename string, fileExts []string) bool {
 	//TODO: only change to lower case on Windows
-	filename = str.ToLower(filename)
+	filename = strings.ToLower(filename)
 	for _, ext := range TextFileExts {
-		if str.HasSuffix(filename, str.ToLower("."+ext)) {
+		if strings.HasSuffix(filename, strings.ToLower("."+ext)) {
 			return true
 		}
 	}
@@ -133,18 +133,18 @@ func ReadFileLines(filename string) []string {
 		myError("Failed reading", filename, "due to:", err)
 		return []string{} // erv
 	}
-	ret := str.Split(string(data), "\n")
+	ret := strings.Split(string(data), "\n")
 	return ret
 } //                                                               ReadFileLines
 
 // WriteFileLines writes lines to filename.
 // This function is mainly used for saving text files.
 func WriteFileLines(filename string, lines []string) error {
-	filename = str.Trim(filename, zr.SPACES)
+	filename = strings.Trim(filename, zr.SPACES)
 	if filename == "" {
 		return myError(zr.EInvalidArg, "^filename")
 	}
-	data := []byte(str.Join(lines, "\n"))
+	data := []byte(strings.Join(lines, "\n"))
 	//
 	// terminate the last line with a newline
 	if data[len(data)-1] != '\n' {

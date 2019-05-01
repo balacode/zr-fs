@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:29:22 6F6CDE                      zr-fs/[get_file_paths.go]
+// :v: 2019-05-01 23:31:05 B3A9C4                      zr-fs/[get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	str "strings"
+	"strings"
 )
 
 // -----------------------------------------------------------------------------
@@ -37,7 +37,7 @@ func GetFilePaths(dir string, exts ...string) []string {
 	filepath.Walk(
 		dir, func(path string, info os.FileInfo, err error) error {
 			// skip directory entries (Walk takes care of reading subfolders)
-			if str.Contains(path, "$RECYCLE.BIN") {
+			if strings.Contains(path, "$RECYCLE.BIN") {
 				return nil
 			}
 			if err != nil {
@@ -50,8 +50,8 @@ func GetFilePaths(dir string, exts ...string) []string {
 			// skip files that don't match needed extension(s)
 			match := len(exts) == 0
 			for _, ext := range exts {
-				ext = "." + str.ToLower(str.Trim(ext, "*."))
-				if str.HasSuffix(str.ToLower(path), ext) {
+				ext = "." + strings.ToLower(strings.Trim(ext, "*."))
+				if strings.HasSuffix(strings.ToLower(path), ext) {
 					match = true
 					break
 				}

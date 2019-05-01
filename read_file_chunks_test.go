@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:29:22 209E62               zr-fs/[read_file_chunks_test.go]
+// :v: 2019-05-01 23:31:05 72FE55               zr-fs/[read_file_chunks_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -16,7 +16,7 @@ to generate a test coverage report for the whole module use:
 
 import (
 	"os"
-	str "strings"
+	"strings"
 	"testing"
 
 	"github.com/balacode/zr"
@@ -90,7 +90,7 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 		// create a file and fill it with some data
 		os.Remove(SampleFile)
 		for _, filler := range fillers {
-			zr.AppendToTextFile(SampleFile, str.Repeat(filler, ChunkSize))
+			zr.AppendToTextFile(SampleFile, strings.Repeat(filler, ChunkSize))
 		}
 	}
 	// -------------------------------------------------------------------------
@@ -101,7 +101,7 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 		// reader() function that will check for consistency
 		i := 0
 		reader := func(chunk []byte) int64 {
-			expect := str.Repeat(fillers[i], ChunkSize)
+			expect := strings.Repeat(fillers[i], ChunkSize)
 			if string(chunk) != expect {
 				t.Error("Read chunk doesn't match expected data.")
 			}
@@ -123,7 +123,7 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 			if i > 0 {
 				t.Error("reader() returned false, but reading did not stop.")
 			}
-			expect := str.Repeat(fillers[0], ChunkSize)
+			expect := strings.Repeat(fillers[0], ChunkSize)
 			if string(chunk) != expect {
 				t.Error("Read chunk doesn't match expected data.")
 			}
