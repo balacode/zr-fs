@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-01 23:31:05 E78E47                                zr-fs/[func.go]
+// :v: 2019-05-06 06:26:38 A43D6E                                zr-fs/[func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -108,7 +108,7 @@ func FlatZip(zipName string, fileNames []string) error {
 // []string{"go", "txt", "log"} is a valid list of file
 // extensions, but []string{".go", "*.txt", ".log"} is not.
 func IsFileExt(filename string, fileExts []string) bool {
-	//TODO: only change to lower case on Windows
+	// TODO: only change to lower case on Windows
 	filename = strings.ToLower(filename)
 	for _, ext := range TextFileExts {
 		if strings.HasSuffix(filename, strings.ToLower("."+ext)) {

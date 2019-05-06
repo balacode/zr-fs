@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-01 23:31:05 B3A9C4                      zr-fs/[get_file_paths.go]
+// :v: 2019-05-06 06:26:38 568D0F                      zr-fs/[get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -67,6 +67,6 @@ func GetFilePaths(dir string, exts ...string) []string {
 	return ret
 } //                                                                GetFilePaths
 
-//TODO: global: find return.*\{\}$ and replace with return nil
+// TODO: global: find return.*\{\}$ and replace with return nil
 
 //end

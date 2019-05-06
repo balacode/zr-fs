@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-06 07:32:42 CA3EE6                      zr-fs/[text_file_exts.go]
+// :v: 2019-05-06 06:26:38 221027                      zr-fs/[text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -17,7 +17,7 @@ package fs
 // *.rules *.settings *.sh *.shtml *.sln *.sql *.svg *.tlh *.tli
 // *.txt *.user *.vbp *.vbw *.vcp *.vcproj *.vcw *.vcxproj
 // *.workspace *.xaml *.xhtml *.xml *.xs *.xsd *.xsx *.yml
-var TextFileExts = []string{ //TODO: use upper case
+var TextFileExts = []string{ // TODO: use upper case
 	//
 	// Web Files
 	"asp",
