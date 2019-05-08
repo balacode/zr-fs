@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-06 06:26:38 A43D6E                                zr-fs/[func.go]
+// :v: 2019-05-08 11:30:41 E269FE                                zr-fs/[func.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -140,7 +140,7 @@ func ReadFileLines(filename string) []string {
 // WriteFileLines writes lines to filename.
 // This function is mainly used for saving text files.
 func WriteFileLines(filename string, lines []string) error {
-	filename = strings.Trim(filename, zr.SPACES)
+	filename = strings.TrimSpace(filename)
 	if filename == "" {
 		return myError(zr.EInvalidArg, "^filename")
 	}
