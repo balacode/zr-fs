@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-03-04 20:18:51 491D56                              zr-fs/[module.go]
+// :v: 2019-05-09 17:18:03 762290                              zr-fs/[module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions
@@ -11,12 +11,6 @@ import (
 
 	"github.com/balacode/zr"
 )
-
-// LB specifies a line break string.
-// On Windows it is a pair of CR and LF.
-// CR is decimal 13, hex 0D.
-// LF is decimal 10, hex 0A.
-const LB = "\r\n"
 
 // LF specifies a line feed string ("\n").
 const LF = "\n"
