@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-06 06:26:38 568D0F                      zr-fs/[get_file_paths.go]
+// :v: 2019-05-09 18:10:45 9DDB59                      zr-fs/[get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -41,7 +41,7 @@ func GetFilePaths(dir string, exts ...string) []string {
 				return nil
 			}
 			if err != nil {
-				fmt.Printf("in path %s: %s"+LF, path, err)
+				fmt.Printf("in path %s: %s\n", path, err)
 				return nil
 			}
 			if info.IsDir() {

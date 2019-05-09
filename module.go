@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-09 17:18:03 762290                              zr-fs/[module.go]
+// :v: 2019-05-09 18:10:45 F5D032                              zr-fs/[module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions
@@ -11,9 +11,6 @@ import (
 
 	"github.com/balacode/zr"
 )
-
-// LF specifies a line feed string ("\n").
-const LF = "\n"
 
 // PL is fmt.Println() but is used only for debugging.
 var PL = fmt.Println
