@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-01 23:31:05 72FE55               zr-fs/[read_file_chunks_test.go]
+// :v: 2019-05-11 04:40:50 F7EF7B               zr-fs/[read_file_chunks_test.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -24,9 +24,11 @@ import (
 
 // go test --run Test_rdfc_ReadFileChunks_
 func Test_rdfc_ReadFileChunks_(t *testing.T) {
-	const ChunkSize = 1024
-	const SamplePath = `x:\test`
-	const SampleFile = SamplePath + "ReadFileChunks.tmp"
+	const (
+		ChunkSize  = 1024
+		SamplePath = `x:\test`
+		SampleFile = SamplePath + "ReadFileChunks.tmp"
+	)
 	// -------------------------------------------------------------------------
 	zr.DisableErrors()
 	// -------------------------------------------------------------------------
