@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-18 17:37:21 57FAC5                              zr-fs/[module.go]
+// :v: 2020-06-20 09:43:21 C47793                              zr-fs/[module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions
@@ -29,7 +29,7 @@ var (
 	callers = zr.Callers
 
 	// Error outputs an error message to the standard output and to a
-	// log file named 'run.log' saved in the program's current directory,
+	// log file named "<process>.log" in the program's current directory,
 	// It also outputs the call stack (names and line numbers of callers.)
 	// Returns an error value initialized with the message.
 	myError = zr.Error

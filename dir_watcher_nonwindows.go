@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2018-06-05 23:50:24 05A2E9              zr-fs/[dir_watcher_nonwindows.go]
+// :v: 2020-06-20 09:43:21 DB3F68              zr-fs/[dir_watcher_nonwindows.go]
 // -----------------------------------------------------------------------------
 // +build !windows
 
@@ -10,7 +10,7 @@ import (
 	"github.com/balacode/zr"
 )
 
-// waitForDirChange __
+// waitForDirChange _ _
 func waitForDirChange(c chan string, dir string) {
 	zr.IMPLEMENT()
 } //                                                            waitForDirChange

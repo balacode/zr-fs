@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-01 23:31:05 DD0E57                           zr-fs/[walk_path.go]
+// :v: 2020-06-20 09:43:21 8B547E                           zr-fs/[walk_path.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -14,7 +14,7 @@ import (
 	"time"
 )
 
-// WalkPathOptions __
+// WalkPathOptions _ _
 type WalkPathOptions struct {
 	FileExts     []string
 	MinSize      int64
@@ -24,7 +24,7 @@ type WalkPathOptions struct {
 	WalkFunc     func(path string, info os.FileInfo, err error) error
 } //                                                             WalkPathOptions
 
-// WalkPath __
+// WalkPath _ _
 func WalkPath(path string, opts WalkPathOptions) []string {
 
 	var (

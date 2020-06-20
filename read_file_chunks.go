@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:29:22 F9C024                    zr-fs/[read_file_chunks.go]
+// :v: 2020-06-20 09:43:21 3FED84                    zr-fs/[read_file_chunks.go]
 // -----------------------------------------------------------------------------
 
 package fs
@@ -11,8 +11,8 @@ import (
 	"github.com/balacode/zr"
 )
 
-// ReadFileChunks reads a file in chunks and repeatedly calls the
-// supplied 'reader' function with each read chunk.
+// ReadFileChunks reads a file in chunks and repeatedly calls
+// the supplied 'reader' function with each read chunk.
 // This function is useful for processing large files to
 // avoid  having to load the entire file into memory.
 //

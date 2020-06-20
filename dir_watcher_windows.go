@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:29:22 0FAA7B                 zr-fs/[dir_watcher_windows.go]
+// :v: 2020-06-20 09:43:21 A5B2B1                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 // +build windows
 
@@ -13,7 +13,7 @@ import (
 	win "github.com/balacode/zr-win"
 )
 
-// waitForDirChange __
+// waitForDirChange _ _
 func waitForDirChange(c chan string, dir string) {
 	// start watching the folder (and check that handle value is correct)
 	var handles [2]win.HANDLE
