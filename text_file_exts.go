@@ -1,25 +1,25 @@
 // -----------------------------------------------------------------------------
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-06 06:26:38 221027                      zr-fs/[text_file_exts.go]
+// :v: 2020-06-20 09:44:35 914DA9                      zr-fs/[text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs
 
 // TextFileExts is an array of text file extensions.
-// *.asm *.asn *.asp *.aspx *.bas *.bat *.c *.cbp *.cc *.cfg
-// *.classpath *.cls *.clw *.cpp *.cs *.csproj *.css *.ctl
-// *.ctp *.cxx *.def *.dep *.dpr *.dsp *.dsw *.fd *.frm
-// *.gitignore *.go *.h *.hc *.hh *.hhc *.hhk *.hhp *.hpp *.hs
-// *.hta *.htm *.html *.hxx *.java *.jcl *.js *.json *.jsonp
-// *.kt *.layout *.less *.log *.mak *.manifest *.meta *.odl *.pas
-// *.pdm *.ph *.php *.pl *.plg *.pm *.prefs *.project
-// *.properties *.py *.rb *.rc *.rc2 *.reg *.resx *.rgon *.rs
-// *.rules *.settings *.sh *.shtml *.sln *.sql *.svg *.tlh *.tli
-// *.txt *.user *.vbp *.vbw *.vcp *.vcproj *.vcw *.vcxproj
+//
+// *.asm *.asn *.asp *.aspx *.bas *.bat *.c *.cbp *.cc *.cfg *.classpath *.cls
+// *.clw *.cpp *.cs *.csproj *.css *.ctl *.ctp *.cxx *.def *.dep *.dpr *.dsp
+// *.dsw *.fd *.frm *.gitignore *.go *.h *.hc *.hh *.hhc *.hhk *.hhp *.hpp *.hs
+// *.hta *.htm *.html *.hxx *.java *.jcl *.js *.json *.jsonp *.kt *.layout
+// *.less *.log *.mak *.manifest *.meta *.odl *.pas *.pdm *.ph *.php *.pl *.plg
+// *.pm *.prefs *.project *.properties *.py *.rb *.rc *.rc2 *.reg *.resx *.rgon
+// *.rs *.rules *.sass *.scss *.settings *.sh *.shtml *.sln *.sql *.svg *.tlh
+// *.tli *.ts *.txt *.user *.vbp *.vbw *.vcp *.vcproj *.vcw *.vcxproj
 // *.workspace *.xaml *.xhtml *.xml *.xs *.xsd *.xsx *.yml
+//
 var TextFileExts = []string{ // TODO: use upper case
 	//
-	// Web Files
+	// Web-related Files
 	"asp",
 	"aspx",
 	"css",
@@ -30,6 +30,8 @@ var TextFileExts = []string{ // TODO: use upper case
 	"js",
 	"less",
 	"php",
+	"sass",
+	"scss",
 	"shtml",
 	"xhtml",
 	//
@@ -132,6 +134,7 @@ var TextFileExts = []string{ // TODO: use upper case
 	"sql",
 	"tlh", // MSVC type library header (generated)
 	"tli", // MSVC type library wrapper implementations (generated)
+	"ts",  // TypeScript files
 	"txt",
 	"xs", // Perl extensions interface file
 } //                                                                TextFileExts
