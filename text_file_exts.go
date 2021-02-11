@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package                    zr-fs/[text_file_exts.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2020-06-20 09:44:35 914DA9                      zr-fs/[text_file_exts.go]
 // -----------------------------------------------------------------------------
 
 package fs

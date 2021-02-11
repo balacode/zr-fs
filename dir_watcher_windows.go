@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package               zr-fs/[dir_watcher_windows.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2020-06-20 09:43:21 A5B2B1                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 // +build windows
 

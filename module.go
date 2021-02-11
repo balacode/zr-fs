@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package                            zr-fs/[module.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2020-06-20 09:43:21 C47793                              zr-fs/[module.go]
 // -----------------------------------------------------------------------------
 
 // Package fs implements file-system related functions

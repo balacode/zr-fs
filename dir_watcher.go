@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package               zr-fs/[dir_watcher_windows.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-04-04 17:43:44 7E3621                 zr-fs/[dir_watcher_windows.go]
 // -----------------------------------------------------------------------------
 
 package fs

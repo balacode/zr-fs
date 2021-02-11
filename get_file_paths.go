@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package                    zr-fs/[get_file_paths.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2019-05-09 18:10:45 9DDB59                      zr-fs/[get_file_paths.go]
 // -----------------------------------------------------------------------------
 
 package fs

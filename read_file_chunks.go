@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package                  zr-fs/[read_file_chunks.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2020-06-20 09:43:21 3FED84                    zr-fs/[read_file_chunks.go]
 // -----------------------------------------------------------------------------
 
 package fs

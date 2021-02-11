@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
+// ZR Library - File System Package                         zr-fs/[walk_path.go]
 // (c) balarabe@protonmail.com                                      License: MIT
-// :v: 2020-06-20 09:43:21 8B547E                           zr-fs/[walk_path.go]
 // -----------------------------------------------------------------------------
 
 package fs
