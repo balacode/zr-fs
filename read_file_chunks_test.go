@@ -24,7 +24,7 @@ import (
 func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	const (
 		ChunkSize  = 1024
-		SamplePath = `x:\test`
+		SamplePath = `X:\test`
 		SampleFile = SamplePath + "ReadFileChunks.tmp"
 	)
 	// -------------------------------------------------------------------------
@@ -139,4 +139,4 @@ func Test_rdfc_ReadFileChunks_(t *testing.T) {
 	os.Remove(SampleFile)
 } //                                                   Test_rdfc_ReadFileChunks_
 
-//end
+// end

@@ -69,4 +69,4 @@ func GetFilePaths(dir string, exts ...string) []string {
 
 // TODO: global: find return.*\{\}$ and replace with return nil
 
-//end
+// end

@@ -69,4 +69,4 @@ func waitForDirChange(c chan string, dir string) {
 	}
 } //                                                            waitForDirChange
 
-//end
+// end

@@ -32,4 +32,4 @@ func NewDirWatcher(dir string) (*DirWatcher, error) {
 	return ret, nil
 } //                                                               NewDirWatcher
 
-//end
+// end

@@ -20,4 +20,4 @@ import (
 func Test_fsfn_DirExists_(t *testing.T) {
 } //                                                        Test_fsfn_DirExists_
 
-//end
+// end

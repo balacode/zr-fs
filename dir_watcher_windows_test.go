@@ -66,4 +66,4 @@ loop:
 	zr.TEqual(t, watchCount, (5))
 } //                                                       Test_dirw_DirWatcher_
 
-//end
+// end

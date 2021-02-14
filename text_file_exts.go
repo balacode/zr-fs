@@ -139,4 +139,4 @@ var TextFileExts = []string{ // TODO: use upper case
 	"xs", // Perl extensions interface file
 } //                                                                TextFileExts
 
-//end
+// end

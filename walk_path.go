@@ -99,4 +99,4 @@ func WalkPath(path string, opts WalkPathOptions) []string {
 	return ret
 } //                                                                    WalkPath
 
-//end
+// end
