@@ -5,7 +5,7 @@
 
 package fs
 
-//  to test all items in dir_watcher_windows.go use:
+//  to test all items in func_test.go use:
 //      go test --run Test_fsfn_
 //
 //  to generate a test coverage report for the whole module use:
