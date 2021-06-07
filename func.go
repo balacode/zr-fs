@@ -110,7 +110,7 @@ func FlatZip(zipName string, fileNames []string) error {
 func IsFileExt(filename string, fileExts []string) bool {
 	// TODO: only change to lower case on Windows
 	filename = strings.ToLower(filename)
-	for _, ext := range TextFileExts {
+	for _, ext := range fileExts {
 		if strings.HasSuffix(filename, strings.ToLower("."+ext)) {
 			return true
 		}
