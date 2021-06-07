@@ -9,7 +9,6 @@ import (
 	"archive/zip"
 	"bytes"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -128,7 +127,7 @@ func IsTextFile(filename string) bool {
 // ReadFileLines reads the specified filename and returns
 // all the lines it contains in a string array.
 func ReadFileLines(filename string) []string {
-	data, err := ioutil.ReadFile(filename)
+	data, err := os.ReadFile(filename)
 	if err != nil {
 		myError("Failed reading", filename, "due to:", err)
 		return []string{} // erv
@@ -156,7 +155,7 @@ func WriteFileLines(filename string, lines []string) error {
 		data = append(data, '\n')
 	}
 	// save the file
-	err := ioutil.WriteFile(filename, data, 0644)
+	err := os.WriteFile(filename, data, 0644)
 	if err != nil {
 		return myError("Failed writing", filename, "due to:", err)
 	}
