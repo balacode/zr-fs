@@ -111,12 +111,15 @@ var TextFileExts = []string{ // TODO: use upper case
 	// Miscellaneous
 	"asm",
 	"asn",
-	"bat", // Windows batch file
-	"cfg", // configuration file
-	"dpr", // Delphi project file
-	"go",  // Go Language source file
-	"hs",  // Haskell source file
-	"jcl", // job class (rarely-used file type)
+	"bat",  // Windows batch file
+	"cfg",  // configuration file
+	"csv",  // Comma Separated Values file
+	"dpr",  // Delphi project file
+	"go",   // Go Language source file
+	"hs",   // Haskell source file
+	"clj",  // Clojure source file
+	"cljs", // Clojure source file
+	"jcl",  // job class (rarely-used file type)
 	"log",
 	"mak", // MAKE file
 	"md",  // Markdown text file
