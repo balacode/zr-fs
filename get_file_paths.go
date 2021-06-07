@@ -68,5 +68,6 @@ func GetFilePaths(dir string, exts ...string) []string {
 } //                                                                GetFilePaths
 
 // TODO: global: find return.*\{\}$ and replace with return nil
+// TODO: replace 'exts' with 'patterns' using Regex
 
 // end
